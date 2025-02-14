@@ -1,0 +1,95 @@
+@startuml uml_class
+hide empty members
+
+class IF {
+    
+}
+
+package factorys {
+    package presentation {
+        abstract factory {
+
+        }
+        class controller {
+            - comp_atcoder_adapter
+            - comp_parser
+            ---
+            - get_data() : json
+        }
+    }
+    package domain {
+        abstract atcoder_adapter {
+            + get_data()
+        }
+
+        abstract parser {
+            + parse_data()
+            + read_data()
+        }
+    }
+    package data {
+        abstract db_repository {
+            + save_data()
+            + load_data()
+        }
+    }
+}
+
+package コンテスト予定 {
+    package presentasion {
+        class contest_info_factroy 
+        {
+
+        }
+    }
+
+    package domain {
+        class contest_atcoder_adapter {
+
+        }
+
+        class contest_parser {
+
+        }
+    }
+    package data {
+        class contest_db_repository {
+
+        }
+    }
+}
+
+package 順位表 {
+    package domain {
+        class 順位表情報取得 {
+
+        }
+
+        class 順位表情報パース {
+
+        }
+    }
+    package data {
+        class ユーザーDB操作 {
+
+        }
+    }
+}
+
+contest_info_factroy -|> factory
+
+controller -> factory
+controller --> atcoder_adapter
+controller --> parser
+
+
+parser --> db_repository
+
+contest_info_factroy --> contest_atcoder_adapter
+contest_info_factroy --> contest_parser
+contest_parser --> contest_db_repository
+
+順位表情報パース --> ユーザーDB操作
+
+
+@enduml
