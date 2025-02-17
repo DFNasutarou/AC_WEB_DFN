@@ -1,0 +1,86 @@
+body {
+    background-color: coral;
+  }
+  .Top {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+  .header {
+    grid-area: header;
+    text-align: center;
+    background-color: brown;
+    color: ghostwhite;
+  }
+  .main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 60% 20%;
+    grid-template-rows: 70% 30%;
+    grid-template-areas:
+      "rooms menus"
+      "rankings contests";
+  }
+  .rooms {
+    grid-area: rooms;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "room1 room2 room3"
+      "room4 room5 room6";
+    gap: 1%; /* 各room間の隙間 */
+    background-color: blue; /* gap部分が青く見える */
+    padding: 1%; /* 端も青い線に */
+  }
+  .room1 {
+    grid-area: room1;
+  }
+  .room2 {
+    grid-area: room2;
+  }
+  .room3 {
+    grid-area: room3;
+  }
+  .room4 {
+    grid-area: room4;
+  }
+  .room5 {
+    grid-area: room5;
+  }
+  .room6 {
+    grid-area: room6;
+  }
+  .img {
+    width:100%
+  }
+  .menus {
+    grid-area: menus;
+    text-align: center;
+    background-color: blue;
+    color: ghostwhite;
+  }
+  .contests {
+    grid-area: contests;
+    text-align: center;
+    background-color: blue;
+    color: ghostwhite;
+  }
+  .rankings {
+    grid-area: rankings;
+    text-align: center;
+    background-color: blue;
+    color: ghostwhite;
+  }
+  .footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: silver;
+    color: ghostwhite;
+  }

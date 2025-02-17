@@ -7,7 +7,7 @@ class IF {
 
 package factorys {
     package presentation {
-        abstract factory {
+        abstract ac_factory {
 
         }
         class controller {
@@ -37,7 +37,7 @@ package factorys {
 
 package コンテスト予定 {
     package presentasion {
-        class contest_info_factroy 
+        class contest_info_factory 
         {
 
         }
@@ -76,17 +76,17 @@ package 順位表 {
     }
 }
 
-contest_info_factroy -|> factory
+contest_info_factory -|> ac_factory
 
-controller -> factory
+controller -> ac_factory
 controller --> atcoder_adapter
 controller --> parser
 
 
 parser --> db_repository
 
-contest_info_factroy --> contest_atcoder_adapter
-contest_info_factroy --> contest_parser
+contest_info_factory --> contest_atcoder_adapter
+contest_info_factory --> contest_parser
 contest_parser --> contest_db_repository
 
 順位表情報パース --> ユーザーDB操作
