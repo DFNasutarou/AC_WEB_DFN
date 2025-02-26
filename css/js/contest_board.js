@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("../../data/crawl_data/contest_info.json")
+    fetch("data/crawl_data/contest_info.json")
         .then(response => response.json())
         .then(data => {
             const now = Math.floor(Date.now() / 1000); // 現在のUNIXタイム
