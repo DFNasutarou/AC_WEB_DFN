@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
     <head>
         <link href="./page_data.css" rel="stylesheet" type="text/css" />
     </head>
@@ -9,43 +10,26 @@
                 <h1>ヘッダー</h1>
             </div>
             <div class="main">
-                <div class="rooms">
-                    <div class="room1">
-                        <img class="img"
-                        src="./picture/glass.png"
-                        />
-                    </div>
-                    <div class="room2">
-                        <img class="img"
-                        src="./picture/glass.png"
-                        />
-                    </div>
-                    <div class="room3">
-                        <img class="img"
-                        src="./picture/glass.png"
-                        />
-                    </div>
-                    <div class="room4">
-                        <img class="img"
-                        src="./picture/glass.png"
-                        />
-                    </div>
-                    <div class="room5">
-                        <img class="img"
-                        src="./picture/glass.png"
-                        />
-                    </div>
-                    <div class="room6">
-                        <img class="img"
-                        src="./picture/glass.png"
-                        />
-                    </div>
+                <div class="rooms" id = "rooms">
                 </div>
                 <div class="menus">
                     <h2>本日のメニュー</h2> 
                 </div>
                 <div class="contests">
                     <h2>コンテスト予定</h2> 
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>日時</th>
+                                <th>コンテスト時間</th>
+                                <th>コンテスト名</th>
+                                <th>RATE対象</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contestTable">
+                            <!-- ここにJSONデータを読み込んで挿入 -->
+                        </tbody>
+                    </table>
                 </div>
                 <div class="rankings">
                     <h2>順位表</h2> 
@@ -55,5 +39,8 @@
                 <h1>フッター</h1>
             </div>
         </div>
+
+    <script src="js/room_event.js"></script>
+    <script src="js/contest_board.js"></script>
     </body>
 </html>
